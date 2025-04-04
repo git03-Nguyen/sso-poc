@@ -25,4 +25,20 @@ services:
       - POSTGRES_DB=keycloak
     ports:
       - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
     restart: always
+  # nginx:
+  #   image: nginx:alpine
+  #   container_name: nginx
+  #   ports:
+  #     - "443:443" # HTTPS port
+  #     - "80:80" # HTTP port (for redirect)
+  #   volumes:
+  #     - ./nginx.conf:/etc/nginx/nginx.conf:ro
+  #     - ./ssl:/etc/nginx/ssl:ro # Folder containing your SSL certificates
+  #   depends_on:
+  #     - keycloak
+
+volumes:
+  postgres_data:
