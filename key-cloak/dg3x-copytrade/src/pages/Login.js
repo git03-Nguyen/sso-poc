@@ -3,7 +3,7 @@ import keycloak from '../keycloak';
 
 const Login = () => {
   const handleLogin = () => {
-    keycloak.login(); // this redirects to Keycloak
+    keycloak.login();
   };
 
   return (

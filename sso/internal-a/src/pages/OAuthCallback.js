@@ -27,11 +27,11 @@ const OAuthCallback = () => {
       .then((data) => {
         // Handle the data returned from the server
         console.log('OAuth Callback Data:', data);
-        window.location.href = '/profile'; // Redirect to the profile page after successful login
+        window.location.href = '/profile';
       })
       .catch((error) => {
         console.error('Error during OAuth callback:', error);
-        window.location.href = '/login'; // Redirect to login on error
+        window.location.href = '/login';
       });
 
   }, []);
